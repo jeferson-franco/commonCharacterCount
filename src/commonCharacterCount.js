@@ -17,3 +17,25 @@ module.exports = solution;
 // npm i jest-cli -g
 // package.json: "scripts": { "test": "jest" }
 // npm test commonCharacterCount
+
+// alternative solution
+// function solution(s1, s2) {
+//     for (let i = 0; i < s1.length; i++) {
+//         s2 = s2.replace(s1[i], "!");
+//     }
+//     return s2.replace(/[^!]/g, "").length;
+// }
+
+// alternative solution
+// function solution(s1, s2) {
+//     let a = s1.split(''),
+//         r = 0;
+//     while (a.length) {
+//         let t = a.pop();
+//         if (s2.includes(t)) {
+//             r++;
+//             s2 = s2.replace(t, '');
+//         }
+//     }
+//     return r;
+// }
